@@ -1,3 +1,3 @@
 import './styles/styles.scss';
 
-console.log('shit')
+console.log('shit');
