@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackOpenBrowser } = require('webpack-open-browser');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -41,5 +42,6 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
+        new ESLintPlugin()
     ],
 };
