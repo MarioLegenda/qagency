@@ -27,7 +27,7 @@
   display: none;
   padding: 12px 61px 12px 61px;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-tablet) {
     display: block;
   }
 }
