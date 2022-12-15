@@ -10,22 +10,24 @@
   background: rgba(66, 66, 66, 0.5);
 }
 
-.image-section__image__structure--responsive {
+.image-section__image__structure {
   width: 100%;
   object-fit: fill;
+}
 
-  @media (min-width: $breakpoint-tablet) {
-    display: none;
+.image-section__image--show-desktop {
+  display: none;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
   }
 }
 
-.image-section__image__structure--desktop {
-  display: none;
+.image-section__image--show-tablet {
+  display: block;
 
-  @media (min-width: $breakpoint-tablet) {
-    width: 100%;
-    object-fit: fill;
-    display: block;
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
   }
 }
 
@@ -48,4 +50,16 @@
   font-weight: 700;
   font-size: 70px;
   line-height: 78px;
+
+  margin-bottom: 30px;
+}
+
+.image-section__content--paragraph {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: white;
+
+  margin: 18px 0 18px 0;
 }
