@@ -1,0 +1,13 @@
+@import "_variables";
+@import "_breakpoints";
+@import "_normalize";
+@import "button";
+@import "header";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $mainFont;
+}

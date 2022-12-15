@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackOpenBrowser } = require('webpack-open-browser');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -13,7 +14,7 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, 'static'),
+            directory: path.join(__dirname, 'src/assets'),
         },
         compress: true,
         port: 9000,
@@ -36,6 +37,11 @@ module.exports = {
         }),
         new WebpackOpenBrowser({
             url: 'http://localhost:9000'
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "./src/assets", to: "assets" },
+            ],
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',

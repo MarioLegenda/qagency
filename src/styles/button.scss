@@ -1,0 +1,33 @@
+.base {
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+
+  cursor: pointer;
+}
+
+.primary {
+  @extend .base;
+  background-color: white;
+  color: $primary;
+}
+
+.secondary {
+  background-color: $primary;
+  color: white;
+}
+
+.login {
+  display: none;
+  padding: 12px 61px 12px 61px;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
+
+.responsive-login {
+  display: block;
+}
