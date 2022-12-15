@@ -1,12 +1,159 @@
-.footer__structure {
-  width: 100%;
-  padding: 96px 140px 12px 96px;
+.footer__structure-root {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  padding: 38px 18px 18px;
+  justify-content: left;
+  align-items: flex-start;
+  gap: 52px;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 96px 140px 54px 96px;
+  }
 }
 
 .footer__styling {
   background-color: $black;
+  color: white;
+}
+
+.footer__row {
+  display: flex;
+}
+
+.footer__main-content {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 54px;
+
+  div {
+    flex: 1;
+    flex-basis: 100%;
+    color: white;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+
+      @media (min-width: $breakpoint-desktop) {
+        height: auto;
+        overflow: auto;
+      }
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer__icon {
+      cursor: pointer;
+      transition: all 0.4s;
+
+      @media (min-width: $breakpoint-desktop) {
+        display: none;
+      }
+    }
+
+    .footer__icon--open {
+      transform: rotate(0deg);
+    }
+
+    .footer__icon--close {
+      transform: rotate(-90deg);
+    }
+
+    .footer__list--open {
+      height: auto;
+    }
+
+    .footer__list--close {
+      height: 0;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+  }
+}
+
+.footer__secondary-content {
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  color: $secondary;
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+  }
+
+  p {
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin: 0;
+    }
+  }
+
+  .footer__terms {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 43px;
+
+    @media (min-width: $breakpoint-desktop) {
+      flex-direction: row;
+    }
+
+    span {
+      display: inline-block;
+      margin: 0 8px 0 8px;
+    }
+
+    div {
+      margin-bottom: 8px;
+    }
+
+    .footer__temporary-pipe {
+      display: none;
+
+      @media (min-width: $breakpoint-desktop) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.footer__contact-list li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__worklyfe {
+  margin-bottom: 54px;
+  
+  p {
+    width: 50%;
+    margin: 24px 0 24px 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 80%;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: left;
+    gap: 24px;
+  }
 }
