@@ -10,11 +10,15 @@
 
 .primary {
   @extend .base;
+
   background-color: white;
   color: $primary;
 }
 
 .secondary {
+  @extend .base;
+
+  padding: 12px 61px 12px 61px;
   background-color: $primary;
   color: white;
 }
@@ -26,6 +30,10 @@
   @media (min-width: $breakpoint-desktop) {
     display: block;
   }
+}
+
+.benefits {
+  margin: 0 auto;
 }
 
 .responsive-login {

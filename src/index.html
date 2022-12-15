@@ -12,7 +12,7 @@
 
     <main>
         <header class="header__structure header__position header__appaerance">
-            <img alt="Website logo" src="assets/logo.svg" />
+            <img rel="preload" alt="Website logo" src="assets/logo.svg" />
 
             <nav class="header__nav__structure">
                 <a href="" class="header__nav__link">About</a>
@@ -26,11 +26,11 @@
                 Login
             </button>
 
-            <img id="menuIcon" alt="Dropdown mobile menu - click to show dropdown" src="assets/menu.svg" />
+            <img rel="preload" id="menuIcon" alt="Dropdown mobile menu - click to show dropdown" src="assets/menu.svg" />
         </header>
 
         <nav id="headerMobileNav" class="header__mobile__nav">
-            <img id="closeMenuIcon" alt="Close menu icon" src="assets/close.svg" />
+            <img rel="preload" id="closeMenuIcon" alt="Close menu icon" src="assets/close.svg" />
 
             <a href="" class="header__nav__link">About</a>
             <a href="" class="header__nav__link">Offices</a>
@@ -44,6 +44,22 @@
                 </button>
             </div>
         </nav>
+
+        <section class="image-section__structure">
+            <div class="image-section__overlay"></div>
+            <img class="image-section__image__structure--responsive" rel="preload" alt="An image describing your welcome to Worklyfe Office and to see the benefits" src="assets/responsiveHero1.jpg" />
+            <img class="image-section__image__structure--desktop" rel="preload" alt="An image describing your welcome to Worklyfe Office and to see the benefits" src="assets/responsiveHero2.jpg" />
+
+            <div class="image-section__content">
+                <h1 class="image-section__content--header">
+                    Welcome to Worklyfe Office
+                </h1>
+
+                <button class="secondary benefits">
+                    See the benefits
+                </button>
+            </div>
+        </section>
     </main>
 </body>
 </html>
