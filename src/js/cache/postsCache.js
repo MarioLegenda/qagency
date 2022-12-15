@@ -15,10 +15,6 @@ export class PostsCache {
         localStorage.removeItem(`posts`);
     }
 
-    clear() {
-        localStorage.clear();
-    }
-
     isEmpty() {
         return Boolean(localStorage.length === 0);
     }
