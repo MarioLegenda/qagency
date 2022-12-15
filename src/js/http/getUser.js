@@ -1,10 +1,10 @@
 import {useAxios} from "./useAxios";
 
-export async function getPosts(limit = 3, skip = 3, select = ['title', 'body', 'userId']) {
+export async function getUser(id) {
     const http = useAxios();
 
     try {
-        const response = await http.get(`/posts?limit=${limit}&skip=${skip}&select=${select.join(',')}`);
+        const response = await http.get(`/users/${id}`);
 
         return {
             data: response.data,

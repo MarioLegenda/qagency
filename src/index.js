@@ -1,52 +1,26 @@
 import './styles/entry.scss';
-import {useHttp} from "./http/useHttp";
+import {useHttp} from "./js/http/useHttp";
+import {addResponsiveFooterToggle} from "./js/events/addResponsiveFooterToggle";
+import {addMenuClickHandler} from "./js/events/addMenuHandler";
+import {cardService} from "./js/service/cardService";
+import {PostsCache} from "./js/cache/postsCache";
+import {postsView} from "./js/view/postsView";
+import {loading} from "./js/common/loading";
 
-const http = useHttp();
-
-function addMenuClickHandler() {
-    const open = document.getElementById("menuIcon");
-    const close = document.getElementById("closeMenuIcon");
-
-    open.addEventListener('click', () => {
-        const el = document.getElementById("headerMobileNav");
-
-        el.classList.add('header__mobile__nav__show-nav');
-        el.classList.remove('header__mobile__nav__hide-nav');
-    });
-
-    close.addEventListener('click', () => {
-        const el = document.getElementById("headerMobileNav");
-
-        el.classList.remove('header__mobile__nav__show-nav');
+async function addCards() {
+    loading(async () => {
+        const posts = await cardService(new PostsCache());
+        postsView(posts);
     });
 }
 
-function addResponsiveFooterToggle() {
-    const icons = document.getElementsByClassName('footer__icon');
+function main() {
+    addResponsiveFooterToggle();
+    addMenuClickHandler();
 
-    for (const el of icons) {
-        el.addEventListener('click', (event) => {
-            const target = event.target;
-            const list = target.parentNode.parentNode.getElementsByTagName('ul');
-
-            if (target.classList.contains('footer__icon--open')) {
-                target.classList.remove('footer__icon--open');
-                target.classList.add('footer__icon--close');
-
-                list[0].classList.remove('footer__list--open');
-
-                return;
-            }
-
-            if (target.classList.contains('footer__icon--close')) {
-                target.classList.remove('footer__icon--close');
-                target.classList.add('footer__icon--open');
-
-                list[0].classList.add('footer__list--open');
-            }
-        })
-    }
+    addCards();
 }
 
-addResponsiveFooterToggle();
-addMenuClickHandler()
+document.addEventListener('DOMContentLoaded', (event) => {
+    main();
+});
