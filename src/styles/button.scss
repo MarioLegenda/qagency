@@ -1,5 +1,5 @@
 .base {
-  border-radius: 20px;
+  border-radius: 25px;
   text-align: center;
   border: none;
   font-size: 16px;
@@ -12,7 +12,9 @@
   @extend .base;
 
   background-color: white;
+  padding: 12px 61px 12px 61px;
   color: $primary;
+  border: 1px solid $primary;
 }
 
 .secondary {
