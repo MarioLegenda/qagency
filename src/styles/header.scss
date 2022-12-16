@@ -16,14 +16,13 @@
 .header__nav__structure {
   display: none;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-desktop) {
     display: flex;
     justify-content: left;
     align-items: center;
     align-content: center;
     gap: 80px;
   }
-
 }
 
 .header__nav__link {
@@ -42,7 +41,7 @@
   display: block;
   cursor: pointer;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-desktop) {
     display: none;
   }
 }
