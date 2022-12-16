@@ -4,9 +4,11 @@ export async function loading(handler) {
     img.classList.add('animate-loader');
 
     const el = document.getElementsByClassName('testimonials__centered-container')[0];
+    el.parentElement.style.height = '1200px';
     el.appendChild(img);
 
     await handler();
 
     el.removeChild(img);
+    el.parentElement.style.height = 'auto';
 }
