@@ -30,8 +30,6 @@ export const deleteCardController = () => {
             if (postsCache.isEmpty()) {
                 postsCache.clear();
                 refetchCardsController();
-
-                return;
             }
         });
     }
