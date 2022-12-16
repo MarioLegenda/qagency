@@ -1,7 +1,7 @@
 ## SETUP
 
 There are two ways to setup this project; via your host system with 
-webpack or with docker. If you choose to setup with webpacp, required
+webpack or with docker. If you choose to setup with webpack, required
 version of node is 16.
 
 ### SETTING UP WITH WEBPACK
