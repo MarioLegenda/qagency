@@ -6,12 +6,14 @@
   "author": "Mario Škrlec",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.production.config.js",
     "serve": "webpack server --config webpack.config.js"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "4.0.0",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.2",
+    "css-minimizer-webpack-plugin": "4.2.2",
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "2.7.2",
     "sass": "1.56.2",
