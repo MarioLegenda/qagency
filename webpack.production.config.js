@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { WebpackOpenBrowser } = require('webpack-open-browser');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -32,9 +31,6 @@ module.exports = {
         new CssMinimizerPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/build.css'
-        }),
-        new WebpackOpenBrowser({
-            url: 'http://localhost:9000'
         }),
         new CopyPlugin({
             patterns: [
