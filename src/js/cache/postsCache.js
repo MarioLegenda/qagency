@@ -11,11 +11,25 @@ export class PostsCache {
         localStorage.setItem(`posts`, JSON.stringify(item));
     }
 
-    remove() {
+    clear() {
         localStorage.removeItem(`posts`);
     }
 
+    remove(id) {
+        const posts = this.get('posts');
+        const idx = posts.findIndex((v, k) => v.id === parseInt(id));
+        if (idx !== -1) {
+            posts.splice(idx, 1);
+            this.set(posts);
+        }
+    }
+
     isEmpty() {
-        return Boolean(localStorage.length === 0);
+        const posts = this.get();
+        if (posts && posts.length === 0) {
+            return true;
+        }
+
+        return !Boolean(posts);
     }
 }

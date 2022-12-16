@@ -7,8 +7,10 @@ export function postsView(posts) {
         const id = `injectableCard${i+1}`;
         const post = posts[i];
 
-        createElement(id, card(post.title, post.body, post.userId), 'testimonials__card');
+        if (post) {
+            createElement(id, card(post.id, post.title, post.body, post.userId), 'testimonials__card');
 
-        userView(post.userId);
+            userView(post.userId);
+        }
     }
 }
