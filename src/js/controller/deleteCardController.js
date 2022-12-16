@@ -26,9 +26,7 @@ export const deleteCardController = () => {
 
             const cardElement = target.parentElement.parentElement;
             cardElement.parentElement.removeChild(cardElement);
-
-            console.log(postsCache.isEmpty());
-
+            
             if (postsCache.isEmpty()) {
                 postsCache.clear();
                 refetchCardsController();
