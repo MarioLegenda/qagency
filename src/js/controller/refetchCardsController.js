@@ -4,9 +4,10 @@ import {cardService} from "../service/cardService";
 import {PostsCache} from "../cache/postsCache";
 import {postsView} from "../view/postsView";
 import {deleteCardController} from "./deleteCardController";
+import {error} from "../common/error";
 
-export const refetchCardsController = () => {
-    loading(async () => {
+export const refetchCardsController = async () => {
+    loading(await error(async () => {
         const cache = new LocalStorageCache();
         cache.clear();
 
@@ -25,5 +26,5 @@ export const refetchCardsController = () => {
         const posts = await cardService(new PostsCache());
         postsView(posts);
         deleteCardController();
-    });
+    }));
 }

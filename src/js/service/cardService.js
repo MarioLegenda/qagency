@@ -5,7 +5,7 @@ export async function cardService(postsCache) {
 
     const {getPosts} = useHttp();
     const {data, error} = await getPosts();
-
+    
     if (error) throw new Error(error);
 
     postsCache.set(data);

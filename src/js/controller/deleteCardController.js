@@ -17,7 +17,7 @@ export const deleteCardController = () => {
 
             target.classList.add('disabled-button');
             target.setAttribute('disabled', true);
-            await deletePost(postId);
+            const {error} = await deletePost(postId);
 
             const postsCache = new PostsCache();
             const storage = new LocalStorageCache();

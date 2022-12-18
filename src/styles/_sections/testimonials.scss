@@ -14,8 +14,11 @@
 }
 
 .testimonials__centered-container {
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   max-width: 1200px;
   margin: 0 auto;
   flex: 1;
@@ -181,5 +184,5 @@
 }
 
 .refetch-button {
-  margin-right: 24px;
+  margin: 28px 24px 0 0;
 }
