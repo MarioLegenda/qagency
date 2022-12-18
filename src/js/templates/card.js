@@ -6,7 +6,7 @@ export const card = (cardId, title, text, userId) => {
         <img src="assets/icon.svg" />
         <div>
             <p>${text}</p>
-            <div id="user-${userId}"></div>
+            <div class="user-${userId}"></div>
         </div>
     </div>
     

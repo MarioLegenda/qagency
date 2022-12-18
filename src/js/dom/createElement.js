@@ -1,5 +1,5 @@
 export function createElement(id, html, className) {
-    const rootEl = document.getElementById(id);
+    const rootEl = document.getElementsByClassName(id)[0];
     const parent = rootEl.parentNode;
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
