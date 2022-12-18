@@ -8,9 +8,13 @@ export function postsView(posts) {
         const post = posts[i];
 
         if (post) {
-            createElement(id, card(post.id, post.title, post.body, post.userId), 'testimonials__card');
+            const createdElement = createElement(id, card(post.id, post.title, `${post.body.substring(0, 165)}...`, post.userId), 'testimonials__card');
 
-            userView(post.userId);
+            if (i === 1) {
+                createdElement.classList.add('testimonials__grid--second-cell');
+            }
+
+            userView(createdElement, post.userId);
         }
     }
 }

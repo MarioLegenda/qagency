@@ -9,7 +9,7 @@ async function main() {
     addMenuClickHandler();
 
     await addCardsController();
-    document.getElementsByClassName('refetch')[0].addEventListener('click', refetchCardsController);
+    document.getElementById('refetch').addEventListener('click', refetchCardsController);
 }
 
 document.addEventListener('DOMContentLoaded', () => main());

@@ -19,7 +19,9 @@ export function createElement(id, html, className) {
     appendingElement.animate(keyframes, timing)
 
     const newPlaceholder = document.createElement('div');
-    newPlaceholder.id = id;
+    newPlaceholder.classList.add(id);
     newPlaceholder.style.display = 'none';
-    parent.appendChild(newPlaceholder)
+    parent.appendChild(newPlaceholder);
+
+    return appendingElement;
 }

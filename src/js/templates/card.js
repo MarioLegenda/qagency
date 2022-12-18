@@ -4,9 +4,8 @@ export const card = (cardId, title, text, userId) => {
     <h2>${title}</h2>
     <div class="testimonials__card--inner-structure">
         <img src="assets/icon.svg" />
-        <div>
+        <div class="user-placeholder-parent">
             <p>${text}</p>
-            <div class="user-${userId}"></div>
         </div>
     </div>
     
