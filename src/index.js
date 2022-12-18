@@ -1,4 +1,4 @@
-import './styles/entry.scss';
+import './styles/main.scss';
 import {addResponsiveFooterToggle} from "./js/events/addResponsiveFooterToggle";
 import {addMenuClickHandler} from "./js/events/addMenuHandler";
 import {addCardsController} from "./js/controller/addCardsController";
