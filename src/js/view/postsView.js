@@ -11,10 +11,6 @@ export function postsView(posts) {
         if (post) {
             const createdElement = createElement(id, card(post.id, post.title, `${post.body.substring(0, 165)}...`, post.userId), 'testimonials__card');
 
-            if (i === 1) {
-                createdElement.classList.add('testimonials__grid--second-cell');
-            }
-
             userView(createdElement, post.userId);
 
             createdElements.push(createdElement);
