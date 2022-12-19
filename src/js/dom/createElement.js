@@ -22,10 +22,5 @@ export function createElement(id, html, className, addClassName) {
 
     appendingElement.animate(keyframes, timing)
 
-    const newPlaceholder = document.createElement('div');
-    newPlaceholder.classList.add(id);
-    newPlaceholder.style.display = 'none';
-    parent.appendChild(newPlaceholder);
-
     return appendingElement;
 }
