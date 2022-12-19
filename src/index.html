@@ -47,8 +47,12 @@
 
         <section class="image-section__structure">
             <div class="image-section__overlay"></div>
-            <img class="image-section__image__structure image-section__image--show-tablet" rel="preload" alt="An image describing your welcome to Worklyfe Office and to see the benefits" src="assets/responsiveHero1.jpg" />
-            <img class="image-section__image__structure image-section__image--show-desktop" rel="preload" alt="An image describing your welcome to Worklyfe Office and to see the benefits" src="assets/responsiveHero2.jpg" />
+            <picture>
+                <source media="(max-width: 786px)" srcset="assets/responsiveHero1.jpg" />
+                <source media="(min-width: 1280px)" srcset="assets/responsiveHero2.jpg" />
+
+                <img alt="Background image of this image section" src="assets/responsiveHero2.jpg" />
+            </picture>
 
             <div class="image-section__content">
                 <h1 class="image-section__content--header">
@@ -63,8 +67,8 @@
 
         <section class="office__structure">
             <div class="office__images">
-                <img class="office__images__image" src="assets/office1.png" />
-                <img class="office__images__image" src="assets/office2.png" />
+                <img alt="An image of business people standing in an apartment" class="office__images__image" src="assets/office1.png" />
+                <img alt="An image of a person typing on a laptop" class="office__images__image" src="assets/office2.png" />
             </div>
 
             <div class="office__content">
@@ -82,8 +86,12 @@
 
         <section class="image-section__structure structure-image-fix">
             <div class="image-section__overlay"></div>
-            <img class="image-section__image__structure image-section__image--show-tablet" rel="preload" alt="An image describing your welcome to Worklyfe Office and to see the benefits" src="assets/responsiveHero4.jpg" />
-            <img class="image-section__image__structure image-section__image--show-desktop" rel="preload" alt="An image describing your welcome to Worklyfe Office and to see the benefits" src="assets/responsiveHero3.jpg" />
+            <picture>
+                <source media="(max-width: 786px)" srcset="assets/responsiveHero4.jpg" />
+                <source media="(min-width: 1280px)" srcset="assets/responsiveHero3.jpg" />
+
+                <img alt="Background image of this image section" src="assets/responsiveHero3.jpg" />
+            </picture>
 
             <div class="image-section__content">
                 <h1 class="image-section__content--header">
@@ -126,20 +134,20 @@
         <footer class="footer__structure-root footer__styling">
             <div class="footer__row footer__main-content">
                 <div class="footer__worklyfe">
-                    <img rel="preload" src="assets/footerLogo.png" />
+                    <img alt="Footer logo of Worklyfe company" rel="preload" src="assets/footerLogo.png" />
 
                     <p>Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non nisi, placerat.</p>
 
                     <div>
-                        <img src="assets/icons/instagram.svg" />
-                        <img src="assets/icons/dribble.svg" />
-                        <img src="assets/icons/twitter.svg" />
-                        <img src="assets/icons/youtube.svg" />
+                        <img alt="Instagram icon" src="assets/icons/instagram.svg" />
+                        <img alt="Dribble icon" src="assets/icons/dribble.svg" />
+                        <img alt="Twitter icon" src="assets/icons/twitter.svg" />
+                        <img alt="Youtube icon" src="assets/icons/youtube.svg" />
                     </div>
                 </div>
 
                 <div>
-                    <h2>Quick links <img class="footer__icon footer__icon--close" src="assets/icons/arrow.svg" /></h2>
+                    <h2>Quick links <img alt="Icon when clicked reveals quick links section" class="footer__icon footer__icon--close" src="assets/icons/arrow.svg" /></h2>
 
                     <ul>
                         <li><a href="">Offices</a></li>
@@ -151,7 +159,7 @@
                 </div>
 
                 <div>
-                    <h2>Guides <img class="footer__icon footer__icon--close" src="assets/icons/arrow.svg" /></h2>
+                    <h2>Guides <img alt="Icon when clicked reveals guides section" class="footer__icon footer__icon--close" src="assets/icons/arrow.svg" /></h2>
 
                     <ul>
                         <li><a href="">About</a></li>
@@ -163,12 +171,12 @@
                 </div>
 
                 <div>
-                    <h2>Reach us <img class="footer__icon footer__icon--close" src="assets/icons/arrow.svg" /></h2>
+                    <h2>Reach us <img alt="Icon when clicked reveals the Reach us section" class="footer__icon footer__icon--close" src="assets/icons/arrow.svg" /></h2>
 
                     <ul class="footer__contact-list">
-                        <li><img src="assets/icons/message.svg" />admin@worklyfe.com</li>
-                        <li><img src="assets/icons/phone.svg" />+88 98765 43210</li>
-                        <li><img src="assets/icons/location.svg" />90210 Beverly Hills California USA</li>
+                        <li><img alt="Email icon representing an email" src="assets/icons/message.svg" />admin@worklyfe.com</li>
+                        <li><img alt="Phone icon representing a phone" src="assets/icons/phone.svg" />+88 98765 43210</li>
+                        <li><img alt="Location icon representing the location" src="assets/icons/location.svg" />90210 Beverly Hills California USA</li>
                     </ul>
                 </div>
             </div>

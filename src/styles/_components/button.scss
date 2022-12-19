@@ -1,9 +1,9 @@
 .base {
-  border-radius: 25px;
   text-align: center;
   border: none;
   font-size: 16px;
   line-height: 24px;
+  border-radius: 38.5px;
 
   cursor: pointer;
 }
@@ -36,6 +36,14 @@
 
 .benefits {
   margin: 0 auto;
+  width: 80%;
+  padding: 24px;
+  border-radius: 38.5px;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: auto;
+    padding: 12px 61px 12px 61px;
+  }
 }
 
 .responsive-login {
