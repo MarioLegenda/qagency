@@ -13,13 +13,7 @@ export const refetchCardsController = async () => {
 
         const cards = document.getElementsByClassName('testimonials__card');
 
-        for (const card of cards) {
-            card.parentElement.removeChild(card);
-        }
-
-        const newCards = document.getElementsByClassName('testimonials__card');
-
-        for (const card of newCards) {
+        for (const card of [...cards]) {
             card.parentElement.removeChild(card);
         }
 
