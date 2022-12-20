@@ -2,11 +2,19 @@
   box-sizing: border-box;
 }
 
+/**
+Since this is custom design, I must override these styles
+in order to not override them every time I need to set
+custom margin/padding
+ */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
 
+/**
+Same as for headers
+ */
 a {
   color: white;
   text-decoration: none;

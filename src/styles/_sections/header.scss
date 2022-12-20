@@ -37,6 +37,10 @@
      RESPONSIVE MENU
  */
 
+/**
+This ID is linked with an event listener in javascript. You
+can view that listener directly in index.js file.
+ */
 #menuIcon {
   display: block;
   cursor: pointer;
@@ -46,6 +50,10 @@
   }
 }
 
+/**
+This ID is linked with an event listener in javascript. You
+can view that listener directly in index.js file.
+ */
 #closeMenuIcon {
   position: absolute;
   right: 0;

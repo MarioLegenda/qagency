@@ -13,19 +13,27 @@
   }
 }
 
+/**
+Office images is a grid that overlaps. The best solution that I could make is a
+5 column grid that allows fine grained moving of grid cells (content).
+
+When on lower resolutions, the images will be able to move (they will not be fixed)
+but on higher resolutions, they will be fixed in place. From what I tested, this works
+fine on both resolutions.
+ */
 .office__images {
   display: grid;
   flex: 1;
   grid-template-columns: repeat(5, 1fr);
 
   .office__images__image {
-    &:first-child {
+    &:first-of-type {
       grid-area: 1 / 1 / 1 / 3;
       align-self: center;
       margin-left: 48px;
     }
 
-    &:last-child {
+    &:last-of-type {
       grid-area: 1 / 3 / 1 / 5;
       align-self: center;
       margin-top: 144px;

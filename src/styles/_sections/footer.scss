@@ -1,3 +1,6 @@
+/**
+    Footer root element
+ */
 .footer__structure-root {
   display: flex;
   padding: 38px 18px 18px;
@@ -10,7 +13,9 @@
     padding: 96px 140px 54px 96px;
   }
 }
-
+/**
+Footer root styling
+ */
 .footer__styling {
   background-color: $black;
   color: white;
@@ -122,6 +127,9 @@
       margin-bottom: 8px;
     }
 
+    /**
+        In the design, a pipe is shown on desktop but not on mobile/tablet (lower resolutions).
+     */
     .footer__temporary-pipe {
       display: none;
 

@@ -7,7 +7,6 @@
   }
 }
 
-/* Use rotate instead, but only if it is supported */
 @supports (rotate: 0deg) {
   @keyframes loader {
     0% {
@@ -19,6 +18,9 @@
   }
 }
 
+/**
+This loader animation is only user on loading indicator when refetching
+ */
 .animate-loader {
   animation-name: loader;
   animation-iteration-count: infinite;
