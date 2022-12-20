@@ -25,6 +25,15 @@
   color: white;
 }
 
+.secondary:disabled {
+  background-color: $secondaryDisabled;
+}
+
+.primary:disabled {
+  border: 1px solid $secondaryDisabled;
+  color: $secondaryDisabled;
+}
+
 .login {
   display: none;
   padding: 12px 61px 12px 61px;
